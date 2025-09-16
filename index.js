@@ -16,6 +16,7 @@ function createNavBar(){
 }
 
 function createTicTacBox(){
+    const fragment = document.createDocumentFragment()
     for(let i = 0; i < 3;i++){
         const row = document.createElement("div")
         row.classList.add("row")
@@ -24,8 +25,9 @@ function createTicTacBox(){
             box.classList.add("box")
             row.appendChild(box)
         }
-        board.appendChild(row)
+        fragment.appendChild(row)
     }
+    board.appendChild(fragment)
 }
 
 createNavBar()
