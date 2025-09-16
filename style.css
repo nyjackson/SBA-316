@@ -40,5 +40,24 @@ header{
     width:100%;
     height:1000px; /*alter*/
     border: 1px black solid;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+#board{
+    width:70%;
+    height:70%;
+    display: flex;
+    flex-direction: column;
 
+}
+.row{
+    border:1px solid black;
+    height:35%;
+    display: flex;
+}
+.box{
+    border:1px solid black;
+    width:100%;
+    flex-direction:row;
 }
