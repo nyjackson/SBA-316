@@ -1,0 +1,31 @@
+header{
+    display:flex;
+    width:100%;
+    border:1px solid black;
+}
+header > *{
+    padding:1%;
+}
+#top-nav{
+    background-color: blue;
+    width:80%;
+    color:white;
+} 
+#logo-box{
+    background-color:red;
+    width:20%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+  list-style-type: none;
+
+}
