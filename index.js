@@ -1,5 +1,5 @@
 const navBar = document.getElementById("top-nav")
-const navMenuLinks = ["About", "Contact"];
+const navMenuLinks = ["New Game", "Top Scores"];
 
 function createNavBar(){
     const ul = document.createElement("ul")
