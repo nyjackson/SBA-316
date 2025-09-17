@@ -1,6 +1,5 @@
 const navBar = document.getElementById("top-nav");
-const navMenuLinks = ["New Game", "Top Scores"];
-const board = document.getElementById("board");
+const navMenuLinks = ["New Quiz", "Quiz Results"];
 
 function createNavBar() {
   const ul = document.createElement("ul");
@@ -13,24 +12,7 @@ function createNavBar() {
   }
   navBar.appendChild(ul);
 }
-
-function createTicTacBox() {
-  const fragment = document.createDocumentFragment();
-  for (let i = 0; i < 3; i++) {
-    const row = document.createElement("div");
-    row.classList.add("row");
-    for (let j = 0; j < 3; j++) {
-      const box = document.createElement("div");
-      box.classList.add("box");
-      row.appendChild(box);
-    }
-    fragment.appendChild(row);
-  }
-  board.appendChild(fragment);
-}
-
 createNavBar();
-createTicTacBox();
 
 {
   //in progress, in {} so not to break ^
@@ -42,5 +24,3 @@ function placeSymbol(e) {
   console.log(target)
   target.appendChild(ticO)
 }
-
-board.addEventListener("click", placeSymbol);
