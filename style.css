@@ -44,23 +44,6 @@ header{
     align-items: center;
     flex-direction: column;
 }
-#board{
-    width:70%;
-    height:70%;
-    display: flex;
-    flex-direction: column;
-
-}
-.row{
-    border:1px solid black;
-    height:35%;
-    display: flex;
-}
-.box{
-    border:1px solid black;
-    width:100%;
-    flex-direction:row;
-}
 
 #msg-box{
     height:15%;
@@ -68,4 +51,8 @@ header{
     margin-top:2%;
     border: 1px solid black;
     background-color: green;
+}
+
+.q-answer{
+    padding:1%;
 }
