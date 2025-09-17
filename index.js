@@ -1,6 +1,7 @@
 const navBar = document.getElementById("top-nav");
 const app = document.getElementById("app")
 const commentList = document.getElementById("comment-list")
+const commentButton = document.getElementById("og-comment")
 const navMenuLinks = ["Account", "Settings"];
 
 function createNavBar() {
@@ -14,11 +15,19 @@ function createNavBar() {
   }
   navBar.appendChild(ul);
 }
+
 createNavBar();
 
 function createComment(){
   const frag = document.createDocumentFragment()
-  const commentBox = document.createElement("div")
-  //const comment = document.createElement("input")
-  commentList.prependChild(frag)
+  let user = window.prompt("Enter your name:")
+  let commentResponse = window.prompt("Enter your comment:")
+  console.log(commentResponse)
+  const comment = document.createElement("div")
+  comment.textContent = commentResponse
+  comment.classList.add("comment")
+  frag.appendChild(comment)
+  commentList.prepend(frag)
 }
+
+commentButton.addEventListener("click", createComment)
