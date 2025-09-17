@@ -16,7 +16,7 @@ function createNavBar() {
 }
 createNavBar();
 
-function createQuestion(q, answers){ 
+function createQuestion(){ 
   const frag = document.createDocumentFragment()
   const div = document.createElement("div")
   const question = document.createElement("h2")
@@ -24,17 +24,28 @@ function createQuestion(q, answers){
   div.appendChild(question)
   const choices = document.createElement("form")
   for(let i = 0; i < answers.length; i++){
+    const container = document.createElement("div")
     const choice = document.createElement("input")
+    const label = document.createElement("label")
     choice.setAttribute("type", "radio")
+    choice.setAttribute("name",i)
+    label.setAttribute("for", i)
+    label.textContent = answers[i]
+    container.appendChild(choice)
+    container.appendChild(label)
+
     //choice.classList.add("q-answer")
-    choices.appendChild(choice)
+    choices.appendChild(container)
   }
   frag.appendChild(div)
   app.appendChild(frag)
   //return frag
+  // const template = document.getElementsByTagName("template")[0]
+  // const clone = template.content.cloneNode(true)
+  // app.appendChild(clone)
 }
 
-createQuestion("Random?",answers)
+createQuestion()
 
 function buildQuiz(){
   const form = document.createElement("form")

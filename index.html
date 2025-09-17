@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="./index.js" defer></script>
     <!-- <script src="https://kit.fontawesome.com/e3c642e335.js" crossorigin="anonymous"></script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -15,8 +18,25 @@
     </header>
     <div id = "app">
         <h1>Quiz</h1>
-        <div id = "msg-box">
-        </div>
+        <!-- <div id = "msg-box">
+        </div> -->
+        <div id = "question">
+          <h2>Question: What is your favorite primary color?</h2>
+          <form id = "choices">
+            <div class = "choice">
+            <input type = "radio" name = "option">
+            <label for = "option">Blue</label>
+            </div>
+            <div class = "choice">
+            <input type = "radio" name = "option">
+            <label for = "option">Red</label>
+            </div>
+            <div class = "choice">
+            <input type = "radio" name = "option">
+            <label for = "option">Green</label>
+            </div>
+          </form>
+        </template>
     </div>
   </body>
 </html>

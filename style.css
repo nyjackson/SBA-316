@@ -1,25 +1,30 @@
+:root{
+    --main-bg-color:#264027;
+    --sub-bg-color:#3C5233;
+    --body-bg-color:#B38A58;
+}
 body{
     display:flex;
     flex-direction: column;
+    color:white;
+    
 }
 header{
     display:flex;
     width:100%;
-    
-    border: 1px black solid;
+    font-family: "Borel", cursive;
 }
 
 #top-nav{
-    background-color: blue;
+    background-color: var(--main-bg-color);
     width:80%;
-    color:white;
 } 
 #logo-box{
-    background-color:red;
+    background-color:var(--sub-bg-color);
     width:20%;
     display:flex;
-    align-items: center;
     justify-content: center;
+    align-items:center;
 }
 
 .nav-bar{
@@ -32,27 +37,29 @@ header{
   list-style-type: none;
 }
 .nav-link:hover{
-    color:red;
+    color:#B38A58;
 }
 
 #app{
-    background-color: rgb(226, 216, 216);
+    background-color: #0D1F22;
     width:100%;
     height:1000px; /*alter*/
-    border: 1px black solid;
     display:flex;
     align-items: center;
     flex-direction: column;
 }
 
-#msg-box{
-    height:15%;
-    width:70%;
-    margin-top:2%;
-    border: 1px solid black;
-    background-color: green;
+#choices{
+    display:flex;
+    flex-direction:column;
 }
 
-.q-answer{
+#question{
+    border: 1px solid black;
+    width:80%;
     padding:1%;
+}
+.choice{
+    padding-left:5%;
+    padding-bottom:1%;
 }
