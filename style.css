@@ -52,6 +52,7 @@ header{
 #og-post{
     border: 1px solid black;
     height:35%;
+    padding:1%;
 }
 #og-post > p{
     padding:1%;
@@ -67,7 +68,7 @@ header{
     height:100px;
 }
 
-form{
+#form{
     text-align:center;
 }
 
@@ -86,13 +87,15 @@ form{
 
 #comment-list{
     width:80%;
-    /* border:1px solid black; */
+    border:1px solid black;
     height:40%;
     padding:5%;
+    margin-top:2%;
 }
 
 .comment{
     border: 1px solid black;
     height:auto;
     padding:1%;
+    font-size: 14pt;
 }
