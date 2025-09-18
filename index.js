@@ -4,7 +4,7 @@ const commentList = document.getElementById("comment-list");
 const commentButton = document.getElementById("og-comment");
 const form = document.querySelector("form");
 const navMenuLinks = ["Clear Votes", "Clear Comments"];
-const footer = document.getElementById("footing");
+const footer = document.getElementById("og-footer");
 
 let likeCounter = 0;
 let dislikeCounter = 0;
@@ -27,7 +27,19 @@ function createComment() {
   const frag = document.createDocumentFragment();
   let commentResponse = window.prompt("Enter your comment:");
   let userResponse = window.prompt("Enter a name:");
-  console.log(commentResponse);
+
+  if(!commentResponse || commentResponse == ""){
+    window.alert("Comment cannot be empty!")
+    return
+  }
+  if(!userResponse || userResponse == ""){
+    userResponse = "Anon"
+  }
+  if(commentResponse.length > 200){
+    window.alert("Comment must be under 200 characters!")
+    return
+  }
+
   const comment = document.createElement("div");
   comment.textContent = commentResponse;
   comment.classList.add("comment");

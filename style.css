@@ -99,7 +99,7 @@ header{
     padding:1%;
     font-size: 14pt;
 }
-#footing{
+#og-footer{
     display: flex;
     align-items: center;
     margin-bottom:5%;
