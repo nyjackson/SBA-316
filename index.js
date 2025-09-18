@@ -4,6 +4,8 @@ const commentList = document.getElementById("comment-list")
 const commentButton = document.getElementById("og-comment")
 const form = document.querySelector("form")
 const navMenuLinks = ["Account", "Settings"];
+const footer = document.getElementById("footing")
+
 let likeCounter = 0
 let dislikeCounter = 0
 
@@ -29,13 +31,26 @@ function createComment(){
   const comment = document.createElement("div")
   comment.textContent = commentResponse
   comment.classList.add("comment")
-  comment.setAttribute("maxLength",120)
+  comment.setAttribute("maxlength",50) //don't think it works
   frag.appendChild(comment)
   
   const p = document.createElement("p")
   p.textContent = "- " + userResponse
   comment.appendChild(p)
   commentList.prepend(frag)
+}
+function updateCounter(){
+  console.log(footer.previousElementSibling)
+  if(footer.previousElementSibling.tagName !== "FORM" ){ 
+    const p = footer.getElementsByTagName("p")[0]
+  }
+  else{
+   const p = document.createElement("p")
+  }
+  p.id = "counters"
+  p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`
+  footer.appendChild(p)
+  
 }
 
 function addLikeOrDislike(e){
@@ -47,9 +62,10 @@ for(let i = 0; i < choices.length;i++){
   if(choices[i].checked == true){
     choices[i].value == "like" ? likeCounter++ : dislikeCounter++
     window.alert(`Your ${choices[i].value} vote has been submitted!`)
+    updateCounter()
   }
-
 }
+
 }
 commentButton.addEventListener("click", createComment)
 form.addEventListener("submit", addLikeOrDislike)
