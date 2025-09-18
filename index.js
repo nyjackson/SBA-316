@@ -31,7 +31,6 @@ function createComment() {
   const comment = document.createElement("div");
   comment.textContent = commentResponse;
   comment.classList.add("comment");
-  comment.setAttribute("maxlength", 50); //don't think it works
   frag.appendChild(comment);
 
   const p = document.createElement("p");

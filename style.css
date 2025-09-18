@@ -12,7 +12,7 @@ body{
 header{
     display:flex;
     width:100%;
-    font-family: "Borel", cursive;
+    /* font-family: "Borel", cursive; */
 }
 
 #top-nav{
@@ -25,6 +25,7 @@ header{
     display:flex;
     justify-content: center;
     align-items:center;
+    font-size: 15pt;
 }
 
 .nav-bar{
@@ -51,11 +52,10 @@ header{
 
 #og-post{
     border: 1px solid black;
-    height:35%;
+    height:auto;
     padding:1%;
 }
 #og-post > p{
-    padding:1%;
     font-size: 20pt;
 }
 
@@ -101,7 +101,8 @@ header{
 }
 #footing{
     display: flex;
-    width:100%;
+    align-items: center;
+    margin-bottom:5%;
 }
 
 #counters{
