@@ -1,13 +1,13 @@
 const navBar = document.getElementById("top-nav");
-const app = document.getElementById("app")
-const commentList = document.getElementById("comment-list")
-const commentButton = document.getElementById("og-comment")
-const form = document.querySelector("form")
-const navMenuLinks = ["Account", "Settings"];
-const footer = document.getElementById("footing")
+const app = document.getElementById("app");
+const commentList = document.getElementById("comment-list");
+const commentButton = document.getElementById("og-comment");
+const form = document.querySelector("form");
+const navMenuLinks = ["Clear Votes", "Clear Comments"];
+const footer = document.getElementById("footing");
 
-let likeCounter = 0
-let dislikeCounter = 0
+let likeCounter = 0;
+let dislikeCounter = 0;
 
 function createNavBar() {
   const ul = document.createElement("ul");
@@ -23,42 +23,56 @@ function createNavBar() {
 
 createNavBar();
 
-function createComment(){
-  const frag = document.createDocumentFragment()
-  let commentResponse = window.prompt("Enter your comment:")
-  let userResponse = window.prompt("Enter a name:")
-  console.log(commentResponse)
-  const comment = document.createElement("div")
-  comment.textContent = commentResponse
-  comment.classList.add("comment")
-  comment.setAttribute("maxlength",50) //don't think it works
-  frag.appendChild(comment)
-  
-  const p = document.createElement("p")
-  p.textContent = "- " + userResponse
-  comment.appendChild(p)
-  commentList.prepend(frag)
+function createComment() {
+  const frag = document.createDocumentFragment();
+  let commentResponse = window.prompt("Enter your comment:");
+  let userResponse = window.prompt("Enter a name:");
+  console.log(commentResponse);
+  const comment = document.createElement("div");
+  comment.textContent = commentResponse;
+  comment.classList.add("comment");
+  comment.setAttribute("maxlength", 50); //don't think it works
+  frag.appendChild(comment);
+
+  const p = document.createElement("p");
+  p.textContent = "- " + userResponse;
+  comment.appendChild(p);
+  commentList.prepend(frag);
 }
 
-function updateCounter(){
-  const p = document.getElementById("counters")
-  p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`
-  footer.appendChild(p)
+function updateCounter() {
+  const p = document.getElementById("counters");
+  p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`;
 }
 
-function addLikeOrDislike(e){
-e.preventDefault()
-let choices = form.querySelectorAll("input")
-console.log(choices)
-for(let i = 0; i < choices.length;i++){
-  console.log(choices[i])
-  if(choices[i].checked == true){
-    choices[i].value == "like" ? likeCounter++ : dislikeCounter++
-    window.alert(`Your ${choices[i].value} vote has been submitted!`)
-    updateCounter()
+function addLikeOrDislike(e) {
+  e.preventDefault();
+  let choices = form.querySelectorAll("input");
+  console.log(choices);
+  for (let i = 0; i < choices.length; i++) {
+    console.log(choices[i]);
+    if (choices[i].checked == true) {
+      choices[i].value == "like" ? likeCounter++ : dislikeCounter++;
+      window.alert(`Your ${choices[i].value} vote has been submitted!`);
+      updateCounter();
+    }
+  }
+}
+commentButton.addEventListener("click", createComment);
+form.addEventListener("submit", addLikeOrDislike);
+
+function clearActions(e) {
+  console.log(e.target.textContent)
+  if (e.target.textContent == "Clear Votes") {
+    const p = document.getElementById("counters");
+    likeCounter = 0;
+    dislikeCounter = 0;
+    p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`;
+  } else if (e.target.textContent == "Clear Comments") {
+    while (commentList.firstChild) {
+      commentList.removeChild(commentList.firstChild);
+    }
   }
 }
 
-}
-commentButton.addEventListener("click", createComment)
-form.addEventListener("submit", addLikeOrDislike)
+navBar.addEventListener("click", clearActions)
