@@ -39,18 +39,11 @@ function createComment(){
   comment.appendChild(p)
   commentList.prepend(frag)
 }
+
 function updateCounter(){
-  console.log(footer.previousElementSibling)
-  if(footer.previousElementSibling.tagName !== "FORM" ){ 
-    const p = footer.getElementsByTagName("p")[0]
-  }
-  else{
-   const p = document.createElement("p")
-  }
-  p.id = "counters"
+  const p = document.getElementById("counters")
   p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`
   footer.appendChild(p)
-  
 }
 
 function addLikeOrDislike(e){
