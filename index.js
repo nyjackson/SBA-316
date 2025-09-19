@@ -20,8 +20,6 @@ function createNavBar() {
   navBar.appendChild(ul);
 }
 
-createNavBar();
-
 function createComment() {
   const frag = document.createDocumentFragment();
   let commentResponse = window.prompt("Enter your comment:");
@@ -83,6 +81,7 @@ function clearActions(e) {
   }
 }
 
+createNavBar();
 navBar.addEventListener("click", clearActions)
 form.addEventListener("submit", addVote);
 commentButton.addEventListener("click", createComment);
