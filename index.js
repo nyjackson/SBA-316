@@ -21,6 +21,11 @@ function createNavBar() {
 }
 
 function createComment() {
+  commentList.textContent = ""
+  commentList.style.textAlign = "left"
+  if(commentList.style.display == "none"){
+    commentList.style.display = "block"
+  }
   const frag = document.createDocumentFragment();
   let commentResponse = window.prompt("Enter your comment:");
   let userResponse = window.prompt("Enter a name:");
@@ -78,6 +83,8 @@ function clearActions(e) {
     while (commentList.firstChild) {
       commentList.removeChild(commentList.firstChild);
     }
+    commentList.style.display = "none"
+
   }
 }
 
