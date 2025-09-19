@@ -1,5 +1,6 @@
-const navBar = document.getElementById("top-nav");
+
 const app = document.getElementById("app");
+const navBar = document.getElementById("top-nav");
 const commentList = document.getElementById("comment-list");
 const commentButton = document.getElementById("og-comment");
 const form = document.querySelector("form");

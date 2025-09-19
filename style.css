@@ -42,7 +42,7 @@ header{
 }
 
 #app{
-    background-color: #d4d4d4; /**#0D1F22*/
+    background-color:#F1BF98;
     width:100%;
     height:1000px; /*alter*/
     display:flex;
@@ -51,7 +51,7 @@ header{
 }
 
 #og-post{
-    border: 1px solid black;
+    border: 1px double #ffffff;
     height:auto;
     padding:1%;
 }
@@ -61,7 +61,7 @@ header{
 
 #user-info{
     width:60%;
-    border: 1px solid black;
+    border: 1px solid #0D1F22;
     display:flex;
 }
 #profile-pic{
@@ -73,7 +73,7 @@ header{
 }
 
 #subject-info{
-    border: 1px solid black;
+    /* border: 1px solid #0D1F22; */
     text-align:right;
     width:40%;
     height:40%;
