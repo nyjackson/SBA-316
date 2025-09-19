@@ -83,7 +83,8 @@ function clearActions(e) {
     while (commentList.firstChild) {
       commentList.removeChild(commentList.firstChild);
     }
-    commentList.style.display = "none"
+    commentList.textContent = "No Comments Yet"
+    commentList.style.textAlign = "center"
 
   }
 }
