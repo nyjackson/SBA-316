@@ -23,7 +23,7 @@ This assessment focuses on measuring my understanding of the Document Object Mod
 This function creates the navbar and adds to the available links. The amount and content of the nav menu links are accessible/alterable via an array.
 
 ### createComment() ###
-This function crafts a comment via DocumentFragment and includes DOM event-validation by taking the inputs from `.prompt()` and confirming that it is filled or limiting the amount of characters in a comment.
+This function crafts a comment via DocumentFragment and includes DOM event-validation by taking the inputs from `.prompt()` and ensuring that it is filled or limiting the amount of characters in a comment.
 
 ### updateCounter() ###
 This function updates the vote counter on the post by accessing the element and changing it's content. 
