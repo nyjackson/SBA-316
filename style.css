@@ -50,7 +50,7 @@ header{
     display:flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom:10%;
+    padding-bottom:5%;
 }
 
 #og-post{
@@ -115,6 +115,6 @@ header{
 }
 
 #counters{
-    padding-left:10%;
+    padding-left:45%;
     color:black;
 }

@@ -21,11 +21,10 @@ function createNavBar() {
 }
 
 function createComment() {
-  commentList.textContent = ""
-  commentList.style.textAlign = "left"
-  if(commentList.style.display == "none"){
-    commentList.style.display = "block"
+  if(commentList.textContent.trim() == "No Comments Yet"){
+    commentList.textContent = ""
   }
+  commentList.style.textAlign = "left"
   const frag = document.createDocumentFragment();
   let commentResponse = window.prompt("Enter your comment:");
   let userResponse = window.prompt("Enter a name:");
@@ -78,7 +77,8 @@ function clearActions(e) {
     const p = document.getElementById("counters");
     likeCounter = 0;
     dislikeCounter = 0;
-    p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`;
+    p.textContent = ""
+    //p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`;
   } else if (e.target.textContent == "Clear Comments") {
     while (commentList.firstChild) {
       commentList.removeChild(commentList.firstChild);
