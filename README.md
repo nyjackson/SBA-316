@@ -13,9 +13,8 @@ This assessment focuses on measuring my understanding of the Document Object Mod
 2. Open index.html in your web browser
 3. Interact!
 
-Resource Links
 ## Resource Links: ##
-[Coolors.co](https://coolors.co/0d1f22-264027-3c5233-f1bf98-b38a58)
-[Duck Picture](https://www.pexels.com/photo/close-up-of-a-mallard-duck-in-autumn-setting-33594736/)
+- [Coolors.co](https://coolors.co/0d1f22-264027-3c5233-f1bf98-b38a58)
+- [Duck Picture](https://www.pexels.com/photo/close-up-of-a-mallard-duck-in-autumn-setting-33594736/)
 
 ## Functions: Definitions & Usage ##
