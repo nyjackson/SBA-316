@@ -57,7 +57,7 @@ function updateCounter() {
   p.textContent = `Likes: ${likeCounter} Dislikes: ${dislikeCounter}`;
 }
 
-function addLikeOrDislike(e) {
+function addVote(e) {
   e.preventDefault();
   let choices = form.querySelectorAll("input");
   console.log(choices);
@@ -71,7 +71,7 @@ function addLikeOrDislike(e) {
   }
 }
 commentButton.addEventListener("click", createComment);
-form.addEventListener("submit", addLikeOrDislike);
+form.addEventListener("submit", addVote);
 
 function clearActions(e) {
   console.log(e.target.textContent)
