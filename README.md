@@ -2,6 +2,7 @@
 
 ## Purpose: ##
 This assessment focuses on measuring my understanding of the Document Object Model (DOM) and my capabilities in implementing its features practically. 
+
 ### Objectives: ###
 - Use DOM properties, methods, and techniques to create a web application that provides a dynamic user experience.
 - Use BOM properties, methods, and techniques to facilitate creation of a dynamic web application.
@@ -32,6 +33,6 @@ This function updates the vote counter on the post by accessing the element and 
 
 This function takes the like or dislike vote from the form and updates the corresponding counter. 
 
-### clearAction() ###
+### clearActions() ###
 
 This functions handles the logic for interacting with the navbar items and completing the clearing action on the votes or the comments. 

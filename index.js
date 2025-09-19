@@ -70,8 +70,6 @@ function addVote(e) {
     }
   }
 }
-commentButton.addEventListener("click", createComment);
-form.addEventListener("submit", addVote);
 
 function clearActions(e) {
   console.log(e.target.textContent)
@@ -88,3 +86,5 @@ function clearActions(e) {
 }
 
 navBar.addEventListener("click", clearActions)
+form.addEventListener("submit", addVote);
+commentButton.addEventListener("click", createComment);
