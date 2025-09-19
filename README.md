@@ -20,7 +20,7 @@ This assessment focuses on measuring my understanding of the Document Object Mod
 
 ## Known Issues: ##
 
-- After submitting a like/dislike vote, if you comment this will add another vote to the previously selected vote.
+- After submitting a like/dislike vote, if you enter a comment it will add another vote to the previously selected vote. Example: Like Chosen > Submit (Like Counter = 1) Comment > Completed Prompts (Like Counter = 2)
 
 ## Functions: Definitions & Usage ##
 
