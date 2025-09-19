@@ -7,7 +7,6 @@ body{
     display:flex;
     flex-direction: column;
     color:white;
-    
     border: 1px solid #0D1F22;
     
 }
@@ -44,7 +43,7 @@ header{
 }
 
 #app{
-    background-color:#F1BF98;
+    background-color:#0D1F22;
     width:100%;
     height:auto; /*alter*/
     display:flex;
@@ -55,8 +54,8 @@ header{
 
 #og-post{
     height:auto;
-    padding:1%;
-    border-bottom: thin solid #0D1F22;
+    padding:2% 1% 1% 1%;
+    border-bottom: thin solid white;
 }
 #og-post > p{
     font-size: 20pt;
@@ -64,7 +63,7 @@ header{
 
 #user-info{
     width:60%;
-    border: 1px solid #0D1F22;
+    border: 1px solid white;
     display:flex;
 }
 #user-info > h2{
@@ -93,7 +92,7 @@ header{
 
 #comment-list{
     width:80%;
-    border:2px double #0D1F22;
+    border:2px double #ffffff;
     border-radius: 10%;
     height:auto;
     padding:5%;
@@ -112,9 +111,9 @@ header{
     display: flex;
     align-items: center;
     margin-bottom:5%;
+    justify-content: space-between;
 }
-
 #counters{
     padding-left:45%;
-    color:black;
+    color:white;
 }
